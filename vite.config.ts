@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: '/my-react-app/',
+  base: '/test-task01/',
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
   },

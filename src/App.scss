@@ -27,6 +27,8 @@ a {
 .placeholder {
   font-size: 40px;
   padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .scroll-to-top {
@@ -62,12 +64,4 @@ a {
   &:active {
     transform: scale(0.95);
   }
-}
-
-.scroll-to-top 
-
-.scroll-to-top
-
-.scroll-to-top:active {
-  transform: scale(0.95);
 }
