@@ -89,14 +89,8 @@ function App() {
         </p>
       </div>
       <div style={{ position: "relative" }}>
-        <NextFooter
-          isVisible={isNext}
-          scrollToTop={scrollToTop}
-        />
-        <RakutenFooter
-          isVisible={!isNext}
-          scrollToTop={scrollToTop}
-        />
+        <NextFooter isVisible={isNext} scrollToTop={scrollToTop} />
+        <RakutenFooter isVisible={!isNext} scrollToTop={scrollToTop} />
       </div>
     </div>
   );

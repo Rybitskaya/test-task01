@@ -20,15 +20,10 @@ import arrowTop from "../../assets/arrow-top.svg";
 
 type Props = {
   isVisible: boolean;
-  isVisibleScroll: boolean;
   scrollToTop: () => void;
 };
 
-export const RakutenFooter: React.FC<Props> = ({
-  isVisible,
-  isVisibleScroll,
-  scrollToTop,
-}) => {
+export const RakutenFooter: React.FC<Props> = ({ isVisible, scrollToTop }) => {
   return (
     <footer
       className={
