@@ -1,0 +1,154 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.rakuten {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: all 1s;
+  z-index: 1;
+  background-color: white;
+
+  &--transparent {
+    opacity: 0;
+    z-index: 0;
+  }
+
+  &__top {
+    height: 42px;
+    background-color: $rak-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    padding: 6px;
+    display: flex;
+    text-align: center;
+
+    @include onTablet {
+      height: 28.6px;
+    }
+
+    @include onTabletRak {
+      height: 46px;
+      font-size: 14px;
+    }
+
+    @include onDesktopRak {
+      height: 30px;
+    }
+
+    &-text {
+      color: $next-white;
+    }
+
+    &-icon {
+      min-width: 13px;
+      height: 16px;
+
+      @include onTabletRak {
+        width: 62.16px;
+      }
+    }
+  }
+
+  &__logo {
+    height: 31px;
+    width: 118px;
+
+    @include onTablet {
+      width: 162px;
+      height: unset;
+    }
+
+    @include onWideDesktop {
+      width: 204px;
+    }
+  }
+
+  &__icon {
+    min-height: 11px;
+    width: calc(100vw - 255px);
+
+    @include onTablet {
+      width: 190px;
+    }
+  }
+
+  &__middle {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    align-items: center;
+  }
+
+  &__middle-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__middle-blackweek {
+    align-items: center;
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    margin: 5px 0;
+
+    @include onTablet {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+    }
+
+    @include onDesktop {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: space-between;
+      padding: 0 14px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+    padding: 0 8px;
+    background-color: $next-grey;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+
+    @include onDesktop {
+      flex-direction: row;
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+
+      &--big {
+        width: 48px;
+        height: 20px;
+      }
+    }
+
+    &-text {
+      color: #333;
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@mixin onTablet {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin onTabletRak {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin onDesktopRak {
+  @media (min-width: 690px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 770px) {
+    @content;
+  }
+}
+
+@mixin onWideDesktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}

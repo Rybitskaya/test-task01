@@ -1,0 +1,192 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: all 1s;
+  z-index: 1;
+  background-color: white;
+
+  &--transparent {
+    opacity: 0;
+    z-index: 0;
+  }
+
+  &__top {
+    background-color: $next-header;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    padding: 0 66px;
+    align-items: center;
+  }
+
+  &__special {
+    background-color: $next-header;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0;
+    color: $next-black;
+    font-size: 12px;
+  }
+
+  &__middle {
+    background-color: $next-black;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+
+    &-container {
+      display: flex;
+      align-items: center;
+    }
+
+    @include onTablet {
+      padding-left: 32px;
+    }
+
+    @include onDesktop {
+      height: 60px;
+    }
+  }
+
+  &__logo {
+    height: 24px;
+    width: 86px;
+    cursor: pointer;
+  }
+
+  &__account {
+    display: none;
+
+    @include onWideDesktop {
+      display: flex;
+      color: $next-white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__icon {
+    filter: brightness(0) invert(1);
+    height: 22px;
+    width: 24px;
+
+    &--no-filter {
+      filter: unset;
+    }
+
+    &-quantity {
+      position: absolute;
+      color: white;
+      font-size: 10px;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    &--account {
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    margin-left: 16px;
+    align-items: center;
+
+    @include onDesktop {
+      & > :first-child {
+        display: none;
+      }
+    }
+
+    @include onWideDesktop {
+      & > :first-child {
+        display: none;
+      }
+    }
+  }
+
+  &__checkout {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      width: 120px;
+      height: 36px;
+      background-color: $next-green;
+      color: $next-white;
+      border-radius: 4px;
+      opacity: 0.5;
+      text-align: center;
+      line-height: 36px;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: default;
+    }
+  }
+
+  &__bottom {
+    height: 44px;
+    background-color: $next-grey;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    overflow: hidden;
+
+    @include onTablet {
+      padding: 0 25.04px;
+    }
+
+    @include onDesktop {
+      height: 37px;
+    }
+
+    @include onWideDesktop {
+      background-color: $next-black;
+    }
+  }
+
+  &__nav {
+    color: $next-white;
+    flex-direction: row;
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s;
+
+    &:first-child {
+      color: $next-yellow;
+    }
+
+    &:last-child {
+      color: $next-orange;
+    }
+
+    &:hover {
+      color: $next-black;
+      background-color: $next-white;
+    }
+  }
+}

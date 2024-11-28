@@ -1,0 +1,75 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.input {
+  display: none;
+
+  @include onDesktop {
+    display: flex;
+    position: relative;
+
+    &__search {
+      margin-left: 16px;
+      width: 300px;
+      height: 36px;
+      border-radius: 4px;
+      padding: 12px;
+    }
+
+    &__button {
+      height: 36px;
+      width: 36px;
+      border-radius: 4px;
+      position: absolute;
+      right: 0;
+    }
+
+    &__icon {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &-rakuten {
+    display: flex;
+    position: relative;
+    border: 0.8px;
+    margin: 0 18px 0 5px;
+    width: 100%;
+
+    &__button {
+      height: 34.4px;
+      width: 18px;
+      position: absolute;
+      right: 0;
+      background-color: $next-black;
+
+      @include onTabletRak {
+        width: 44.4px;
+        height: 44.4px;
+      }
+    }
+
+    &__icon {
+      height: 8px;
+      width: 8px;
+      filter: brightness(0) invert(1);
+
+      @include onTabletRak {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &__search {
+      padding-left: 18px;
+      height: 34.4px;
+      width: 100%;
+      color: #9c9c9c;
+
+      @include onTabletRak {
+        height: 44.4px;
+      }
+    }
+  }
+}
